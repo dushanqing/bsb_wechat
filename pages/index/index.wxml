@@ -12,5 +12,6 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    这是包商进件宝
   </view>
 </view>
