@@ -1,10 +1,18 @@
+import WxValidate from './components/plugins/wx-validate/WxValidate'
+import WxService from './components/plugins/wx-service/WxService'
+import HttpResource from './components/plugins/wx-helpers/HttpResource'
+import HttpService from './components/plugins/wx-helpers/HttpService'
+import __config from './components/plugins/etc/config'
+
 //app.js
 App({
+  
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
 
     // 登录
     wx.login({
@@ -12,6 +20,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+  
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -33,7 +42,60 @@ App({
       }
     })
   },
+  onShow() {
+    console.log('onShow')
+  },
+  onHide() {
+    console.log('onHide')
+  },
+  getUserInfo() {
+    return this.WxService.login()
+      .then(data => {
+        console.log(data)
+        return this.WxService.getUserInfo()
+      })
+      .then(data => {
+        console.log(data)
+        this.globalData.userInfo = data.userInfo
+        return this.globalData.userInfo
+      })
+  },
   globalData: {
     userInfo: null
-  }
+  },
+  renderImage(path) {
+      if (!path) return ''
+      if (path.indexOf('http') !== -1) return path
+      return `${this.__config.domain}${path}`
+    },
+    WxValidate: (rules, messages) => new WxValidate(rules, messages),
+    HttpResource: (url, paramDefaults, actions, options) => new HttpResource(url, paramDefaults, actions, options).init(),
+    HttpService: new HttpService({
+      baseURL: __config.basePath,
+    }),
+    WxService: new WxService,
+    __config,
+})
+
+
+
+
+
+App({
+ 
+  globalData: {
+    userInfo: null
+  },
+  renderImage(path) {
+    if (!path) return ''
+    if (path.indexOf('http') !== -1) return path
+    return `${this.__config.domain}${path}`
+  },
+  WxValidate: (rules, messages) => new WxValidate(rules, messages),
+  HttpResource: (url, paramDefaults, actions, options) => new HttpResource(url, paramDefaults, actions, options).init(),
+  HttpService: new HttpService({
+    baseURL: __config.basePath,
+  }),
+  WxService: new WxService,
+  __config,
 })

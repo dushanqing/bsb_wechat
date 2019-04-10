@@ -1,7 +1,13 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/login/login",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/mcht/mchtBaseInfo/index",
+    "pages/mcht/detail/mchtMngNo/mchtMngNo",
+    "pages/mcht/mchtAcctInfo/mchtAcctInfo",
+    "pages/mcht/mchtPicInfo/mchtPicInfo",
+    "pages/mcht/mchtProdInfo/mchtProdInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
