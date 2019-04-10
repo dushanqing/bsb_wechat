@@ -1,12 +1,12 @@
 {
-  "pages":[
-    "pages/index/index",
+  "pages": [
+    "pages/login/login",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "先生请加油",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

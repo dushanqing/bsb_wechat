@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+@import "/style/weui.wxss";
+
+.login_container {
+  height: 176px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.login_title {
+  height: 216rpx;
+  width: 750rpx;
+}
+
+.login_userName {
+  height: 48rpx;
+  width: 48rpx;
+}
+
+.login_passWord {
+  height: 48rpx;
+  width: 48rpx;
+}
