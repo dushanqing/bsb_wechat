@@ -1,10 +1,7 @@
-<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
-    <view class="page__hd">
-        <view class="page__title">支付产品</view>
-        <view class="page__desc">页码图标</view>
-    </view>
+<view class="page">
+   <include src="../../common/step-nav.wxml" />
     <view class="page__bd">
-        <view class="weui-cells weui-cells_after-title">
+        <!-- <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
                     <view class="weui-label">可用产品(复选)</view>
@@ -13,7 +10,17 @@
                     <input class="weui-input" placeholder="XXX有限公司"/>
                 </view>
             </view>
-        </view>
+        </view> -->
+
+
+                  
+                  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{ items }}" wx:key="" data-path="{{ item.path }}" data-index="{{ index }}" bindtap="navigateTo">  
+                      
+                            <view class="weui-cell__bd">{{ item.text }}</view>
+                            <view class="weui-cell__ft weui-cell__ft_in-access">
+                              <text wx:if="{{ index === 2 }}">{{ item.path }}</text>
+                            </view>
+                  </view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
@@ -111,7 +118,7 @@
 
 
         <view class="weui-btn-area">
-            <button class="weui-btn" type="primary" bindtap="mchtInfoNextStep">下一步</button>
+            <button class="weui-btn" id="step-btn" type="primary" bindtap="mchtAdd">提交审核</button>
         </view>
     </view>
 </view>

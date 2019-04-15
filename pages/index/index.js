@@ -7,7 +7,7 @@ Page({
       {
         icon: '',
         text: '进件商户',
-        path: '/pages/mcht/mchtBaseInfo/index'
+        path: '/pages/mcht/mchtAdd/mchtBaseInfo/index'
       },
     ]
   },

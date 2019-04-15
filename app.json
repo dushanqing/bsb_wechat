@@ -1,18 +1,20 @@
 {
   "pages": [
+    "pages/mcht/mchtAdd/mchtPicInfo/mchtPicInfo",
     "pages/index/index",
     "pages/login/login",
     "pages/logs/logs",
-    "pages/mcht/mchtBaseInfo/index",
-    "pages/mcht/detail/mchtMngNo/mchtMngNo",
-    "pages/mcht/mchtAcctInfo/mchtAcctInfo",
-    "pages/mcht/mchtPicInfo/mchtPicInfo",
-    "pages/mcht/mchtProdInfo/mchtProdInfo"
+    "pages/mcht/mchtAdd/mchtBaseInfo/index",
+    "pages/mcht/mchtAdd/mchtAcctInfo/mchtAcctInfo",
+    "pages/mcht/mchtAdd/detail/mchtMngScope/mchtMngScope",
+    "pages/mcht/mchtAdd/mchtProdInfo/mchtProdInfo",
+    "pages/mcht/mchtAdd/detail/mchtProdCheck/mchtProdCheck",
+    "pages/mcht/mchtAdd/detail/mchtAddResult/mchtAddResult"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "先生请加油",
+    "navigationBarTitleText": "包商进件宝",
     "navigationBarTextStyle": "black"
   }
 }

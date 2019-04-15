@@ -4,13 +4,13 @@ Page({
   data: {
 
     userInfo: {},
-    // items: [
-    //   {
-    //     icon: '',
-    //     text: '所属商户',
-    //     path: '../detail/mchtMngNo/mchtMngNo'
-    //   },
-    // ],
+    items: [
+      {
+        icon: '',
+        text: '可用产品(复选)',
+        path: '../detail/mchtProdCheck/mchtProdCheck'
+      },
+    ],
 
 
 
@@ -59,15 +59,11 @@ Page({
       storeIndex: e.detail.value
     });
   },
-  bindDateChange: function (e) {
-    this.setData({
-      date: e.detail.value
-    })
-  },
-  // 结算信息页面 下一步
-  mchtAcctNextStep(e) {
+  // 提交审核
+   mchtAdd(e) {
     console.log("nextStep");
-    const path = "../mchtPicInfo/mchtPicInfo"
+    // const index = e.currentTarget.dataset.index
+     const path = "../detail/mchtAddResult/mchtAddResult"
     App.WxService.navigateTo(path)
   }
 

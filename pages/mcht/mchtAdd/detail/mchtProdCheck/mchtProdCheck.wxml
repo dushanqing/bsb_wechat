@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="section section_gap">
+      <checkbox-group class="group" bindchange="checkboxChange">
+        <view class="label-1" wx:for="{{checkboxItems}}">
+          <label>
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"></checkbox>
+            <text class="label-1__text">{{item.value}}</text>
+          </label>
+        </view>
+      </checkbox-group>
+    </view>
+  </view>
+</view>
