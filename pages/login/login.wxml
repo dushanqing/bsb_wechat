@@ -1,17 +1,18 @@
 <!--pages/login/login.wxml-->
-<image class='login_title' src='/images/bsb.png'></image>
+<view class="login_title_container">
+  <image class='login_title_image' src='/images/bsb.png'></image>
+</view>
 
-<view class="weui-cells weui-cells_after-title ">
-
+<view class="weui-cells">
   <view class="weui-cell weui-cell_input ">
-      <view >
+      <view>
         <image class='login_userName' src='/images/userName.png'></image>
       </view>
       <view>
-          <input class="weui-input" placeholder="请输入账号"/>
+          <input class="weui-input" type='text' placeholder="请输入账号"/>
       </view>
   </view>
-  <view class="weui-cell weui-cell_input weui-cell_vcode">
+   <view class="weui-cell weui-cell_input">
     <view >
           <image class='login_passWord' src='/images/passWord.png'></image>
     </view>
@@ -19,5 +20,7 @@
         <input class="weui-input" placeholder="请输入密码" />
     </view>
   </view>
-
+</view>
+<view class='login_login_container'>
+  <image class='login_image' src='/images/login.png'></image>
 </view>

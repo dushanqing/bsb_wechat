@@ -7,14 +7,14 @@
  */
 @import "/style/weui.wxss";
 
-.login_container {
-  height: 176px;
+.login_title_container {
+  height: 200px;
   display: flex;
   justify-content: flex-start;
-  flex-direction: column;
+ 
 }
 
-.login_title {
+.login_title_image {
   height: 216rpx;
   width: 750rpx;
 }
@@ -28,3 +28,15 @@
   height: 48rpx;
   width: 48rpx;
 }
+
+.login_login_container{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center
+}
+.login_image{
+  height: 100rpx;
+  width:600rpx;
+} 

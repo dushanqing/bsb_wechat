@@ -6,8 +6,14 @@
     "pages/logs/logs",
     "pages/mcht/mchtAdd/mchtBaseInfo/index",
     "pages/mcht/mchtAdd/mchtAcctInfo/mchtAcctInfo",
+<<<<<<< HEAD
     "pages/mcht/mchtAdd/detail/mchtMngScope/mchtMngScope",
     "pages/mcht/mchtAdd/mchtProdInfo/mchtProdInfo",
+=======
+    "pages/mcht/mchtAdd/mchtPicInfo/mchtPicInfo",
+    "pages/mcht/mchtAdd/mchtProdInfo/mchtProdInfo",
+    "pages/mcht/mchtAdd/detail/mchtMngScope/mchtMngScope",
+>>>>>>> wechat
     "pages/mcht/mchtAdd/detail/mchtProdCheck/mchtProdCheck",
     "pages/mcht/mchtAdd/detail/mchtAddResult/mchtAddResult"
   ],
